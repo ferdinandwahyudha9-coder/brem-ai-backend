@@ -19,9 +19,14 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => [env('FRONTEND_URL', 'http://localhost:5173')],
+    'allowed_origins' => [
+        env('FRONTEND_URL', 'http://localhost:5173'),
+        'https://brem-ai-frontend-i1b2pi385-dinands-projects-20f3e66a.vercel.app',
+    ],
 
-    'allowed_origins_patterns' => [],
+    'allowed_origins_patterns' => [
+        '#^https://brem-ai-frontend.*\.vercel\.app$#',
+    ],
 
     'allowed_headers' => ['*'],
 
